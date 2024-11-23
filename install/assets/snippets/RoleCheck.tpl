@@ -7,7 +7,7 @@
  * @category    snippet
  * @version    1.0
  * @internal @modx_category Users
- * @lastupdate  19-11-2024
+ * @lastupdate  23-11-2024
  */
 
 <?php
@@ -20,12 +20,14 @@ $NoChunk = isset($NoChunk) ? $NoChunk : '';               // Name of the chunk o
 $EVOuserId = evolutionCMS()->getLoginUserID();
 $userId = isset($userId) ? (string)$userId : $EVOuserId;
 
-// Function to render chunk or HTML
-function renderChunkOrHtml($value) {
-    if (strpos($value, '@CODE:') === 0) {
-        return substr($value, 6); // Removes '@CODE:' and returns the HTML code
-    } else {
-        return evolutionCMS()->getChunk($value); // Returns the chunk
+// Check if the function already exists to avoid redeclaration
+if (!function_exists('renderChunkOrHtml')) {
+    function renderChunkOrHtml($value) {
+        if (strpos($value, '@CODE:') === 0) {
+            return substr($value, 6); // Removes '@CODE:' and returns the HTML code
+        } else {
+            return evolutionCMS()->getChunk($value); // Returns the chunk
+        }
     }
 }
 
