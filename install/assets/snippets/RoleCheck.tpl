@@ -11,6 +11,7 @@
  */
 
 <?php
+// call: [!RoleCheck? &roles=`WebUsers` &YesChunk=`WelcomeUser` &NoChunk=`YouAreNotLogged`!]
 // Snippet parameters
 $roles = isset($roles) ? explode(',', $roles) : [];        // List of roles to compare
 $YesChunk = isset($YesChunk) ? $YesChunk : '';            // Name of the chunk or HTML to display if the user is authorized
