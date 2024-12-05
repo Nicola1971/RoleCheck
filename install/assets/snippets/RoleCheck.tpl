@@ -5,7 +5,7 @@
  * 
  * @author    Nicola Lambathakis http://www.tattoocms.it/
  * @category    snippet
- * @version    1.0
+ * @version    1.0.1
  * @internal @modx_category Users
  * @lastupdate  23-11-2024
  */
