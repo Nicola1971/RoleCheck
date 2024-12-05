@@ -10,7 +10,6 @@
  * @lastupdate  23-11-2024
  */
 
-<?php
 // call: [!RoleCheck? &roles=`WebUsers` &YesChunk=`WelcomeUser` &NoChunk=`YouAreNotLogged`!]
 // Snippet parameters
 $roles = isset($roles) ? explode(',', $roles) : [];        // List of roles to compare
